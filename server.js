@@ -19,6 +19,9 @@ app.use(cors());
 // app.use(cors({ origin: "http://localhost:3000" }));
 // app.use(VerifyToken);
 const { Authencticate } = require("./config/Authenticator");
+app.get("/test",async (req, res) => {
+  res.status(200).send("Up and Running");
+});
 app.post("/Login", async (req, res) => {
   let data = [];
   let key=null;
