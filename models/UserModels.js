@@ -257,7 +257,7 @@ exports.AddRole = async (data) => {
   let specialid=0;
 if(data.CatagoryId==='-1')
   specialid=1;
-  let query = "insert into employee_Role (RoleName,CatagoryId,Special) values (?,?,?)";
+  let query = "insert into employee_role (RoleName,CatagoryId,Special) values (?,?,?)";
   return promise_connection(query, [data.RoleName, data.CatagoryId,specialid]);
 };
 
