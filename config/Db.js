@@ -1,0 +1,24 @@
+const mysql=require("mysql");
+
+
+const connection=mysql.createPool({
+
+connectionLimit:10,
+    host:process.env.HOST,
+    user:process.env.USER,
+    password:process.env.PASSWORD,
+    database:process.env.DATABASE,
+
+});
+
+// connection.connect((err)=>{
+
+
+//     if(err){
+//         throw ("mysqlerror is:",err);
+//     }else{
+//         console.log("Mysql Connected");
+//     }
+// })
+
+module.exports=connection;
