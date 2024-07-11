@@ -420,9 +420,12 @@ exports.GetEmpWorkDataID = async (ID) => {
 };
 
 exports.ResetEmpPass = async (ID) => {
-  let query = "update login_data set userPassword='1234' where empId=? ";
+  const salt = await bcryt.genSalt(10);
+  const hashpass = await bcryt.hash("1234", salt);
+  let query = "update login_data set userPassword=? where empId=? ";
 
-  return await promise_connection(query, [ID]);
+
+  return await promise_connection(query, [hashpass,ID]);
 };
 
 exports.ActivateProjSite = async (ID) => {
