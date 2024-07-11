@@ -63,7 +63,7 @@ exports.SaveEmp = async (req, res) => {
   try {
     
     data = await SaveEmp(req.body);
-    res.json({ msg: "Succesfull", data: data });
+    res.json({ msg: "Employee Saved Successfully", data: data });
   } catch (error) {
     console.log(error);
     res.json({ msg: error, data: [] });
@@ -74,7 +74,7 @@ exports.GetEmp = async (req, res) => {
   let data = [];
   try {
     data = await GetEmp();
-    res.json({ msg: "Data Milala Ka", data: data });
+    res.json({ msg: "All Emp Details", data: data });
   } catch (error) {
     console.log(error);
     res.json({ msg: error, data: [] });
@@ -85,7 +85,7 @@ exports.DeleteEmp = async (req, res) => {
   let data = [];
   try {
     data = await DeleteEmp(req.body);
-    res.json({ msg: "Employee udavlo ", data: data });
+    res.json({ msg: "Employee Removed ", data: data });
   } catch (error) {
     console.log(error);
     res.json({ msg: error, data: [] });
@@ -96,7 +96,7 @@ exports.GetRole = async (req, res) => {
   let data = [];
   try {
     data = await GetRoles();
-    res.json({ msg: "Ghe Role", data: data });
+    res.json({ msg: "Role List", data: data });
   } catch (error) {
     console.log(error);
     res.json({ msg: error, data: data });
@@ -107,7 +107,7 @@ exports.SaveProj_Site = async (req, res) => {
   let data = [];
   try {
     data = await SaveProj_Site(req.body);
-    res.json({ msg: "Sites save kelo be!!", data: data });
+    res.json({ msg: "Site is Saved", data: data });
   } catch (error) {
     console.log(error);
     res.json({ msg: error, data: data });
@@ -118,7 +118,7 @@ exports.GetProj_Site = async (req, res) => {
   let data = [];
   try {
     data = await GetProj_site();
-    res.json({ msg: "Sites Dilo Bagh", data: data });
+    res.json({ msg: "Sites List", data: data });
   } catch (error) {
     console.log(error);
 
@@ -129,7 +129,7 @@ exports.GetProj_Site = async (req, res) => {
 exports.DeleteProj_Site = async (req, res) => {
   try {
     data = await DeleteProj_Site(req.params.Id);
-    res.json({ msg: "Site Khatam Tata Goodbye Gaya" });
+    res.json({ msg: "Site has been deleted" });
   } catch (error) {
     console.log(error);
     res.json({ msg: error });
@@ -141,7 +141,7 @@ exports.UpdateProj_Site = async (req, res) => {
   try {
     // console.log(req);
     data = await UpdateProjct_site(req.body);
-    res.json({ msg: "Site Update Kelo bagh" });
+    res.json({ msg: "Site Updated" });
   } catch (error) {
     console.log(error);
     res.json({ msg: error });
@@ -152,7 +152,7 @@ exports.GetSiteID = async (req, res) => {
   let data = [];
   try {
     data = await GetSiteID(req.params.Id);
-    res.json({ msg: "Ghe Site Data", data: data });
+    res.json({ msg: "Site Data ", data: data });
   } catch (error) {
     console.log(error);
     res.json({ msg: error });
@@ -163,7 +163,7 @@ exports.GetEmpId = async (req, res) => {
   let data = [];
   try {
     data = await GetEmpId(req.params.Id);
-    res.json({ msg: "Ghe be kaamgar ", data: data });
+    res.json({ msg: "All Workers List ", data: data });
   } catch (error) {
     console.log(error);
     res.json({ msg: error });
@@ -174,7 +174,7 @@ exports.UpdateEmp = async (req, res) => {
   let data = [];
   try {
     data = await UpdateEmp(req.body);
-    res.json({ msg: "Succesfull", data: data });
+    res.json({ msg: "Employee Updated", data: data });
   } catch (error) {
     console.log(error);
     res.json({ msg: error });
@@ -200,7 +200,7 @@ exports.Login = async (req, res) => {
     // verifyToken();
     console.log();
 
-    res.json({ msg: "Key Save kr be", data: data });
+    res.json({ msg: "Login Status Updated", data: data });
   } catch (error) {
     console.log(error);
     res.json({ msg: error });
@@ -211,7 +211,7 @@ exports.GetCategroy = async (req, res) => {
   let data = [];
   try {
     data = await GetCatagory();
-    res.json({ msg: "Category ghe be", data: data });
+    res.json({ msg: "Catagory list", data: data });
   } catch (error) {
     console.log(error);
     res.json({ msg: error });
@@ -222,7 +222,7 @@ exports.AddEmployeeRole = async (req, res) => {
   let data = [];
   try {
     data = await AddRole(req.body);
-    res.json({ msg: "roll add kelo be", data: data });
+    res.json({ msg: "Role Added", data: data });
   } catch (error) {
     console.log(error);
     res.json({ msg: error });
@@ -234,7 +234,7 @@ exports.UpdateRole = async (req, res) => {
   try {
    
     data = await UpdateRole(req.body);
-    res.json({ msg: "roll update kelo", data: data });
+    res.json({ msg: "Role Updated", data: data });
   } catch (error) {
     console.log(error);
     res.json({ msg: error });
@@ -246,7 +246,7 @@ exports.GetRoleID = async (req, res) => {
   try {
     
     data = await GetRoleId(req.params.Id);
-    res.json({ msg: "ghe baba info", data: data });
+    res.json({ msg: "Role Info", data: data });
   } catch (error) {
     console.log(error);
     res.json({ msg: error });
@@ -257,7 +257,7 @@ exports.GetRoleCat=async(req,res)=>{
   try {
     
     data = await GetRoleIdCat(req.params.Id);
-    res.json({ msg: "ghe baba Role", data: data });
+    res.json({ msg: "Role Category", data: data });
   } catch (error) {
     console.log(error);
     res.json({ msg: error });
@@ -268,7 +268,7 @@ exports.GetTalukaList=async(req,res)=>{
   let data=[];
   try{
     data=await GetTalukaList();
-    res.json({msg:"taluka be!!",data:data})
+    res.json({msg:"taluka list",data:data})
     
   }catch(error)
   {
@@ -282,7 +282,7 @@ exports.GetSiteEmp=async(req,res)=>{
   try{
   // console.log("coming herer",req.body);
     data=await GetSiteEmp(req.body)
-    res.json({msg:"worker ale ka",data:data})
+    res.json({msg:"worker list",data:data})
 
   }catch(error)
   {
@@ -310,7 +310,7 @@ exports.GetAttendance=async(req,res)=>{
   let data=[];
   try{
     data=await GetAttendance(req.body);
-    res.json({msg:"Attendance Lavun Ghe",data:data});
+    res.json({msg:"Attendance List",data:data});
 
   }catch(error)
   {
@@ -326,7 +326,7 @@ exports.GetRoleIdAdmin=async(req,res)=>{
   {
 
     data=await GetRoleIdAdmin();
-    res.json({msg:"Adminchi Pora",data:data});
+    res.json({msg:"Admin Workers",data:data});
   }catch(error)
   {
     console.log(error);
@@ -338,7 +338,7 @@ exports.PramoteUser=async(req,res)=>{
   let data=[];
   try{
     data=await PramoteUser(req.body);
-    res.json({msg:"Admincha Kamgar",data:data});
+    res.json({msg:"Official Duty Appointed",data:data});
 
   }catch(error)
   {
@@ -354,7 +354,7 @@ exports.GetEmpAdmin=async(req,res)=>{
   {
 
     data=await GetEmpAdmin();
-    res.json({msg:"Adminche jigri",data:data});
+    res.json({msg:"Admin Employee",data:data});
   }catch(error)
   {
     console.log(error);
@@ -370,7 +370,7 @@ exports.GetEmpWorkData=async(req,res)=>{
   {
 
     data=await GetEmpWorkData();
-    res.json({msg:"Adminchya Kamgaranchi Kame",data:data});
+    res.json({msg:"Official Duty",data:data});
   }catch(error)
   {
     console.log(error);
@@ -386,7 +386,7 @@ exports.GetEmpWorkDataId=async(req,res)=>{
   {
 
     data=await GetEmpWorkDataID(req.params.Id);
-    res.json({msg:"Admincha Kamgar ",data:data});
+    res.json({msg:"Admincha Employee ",data:data});
   }catch(error)
   {
     console.log(error);
@@ -416,7 +416,7 @@ exports.ActivateProjSite=async(req,res)=>{
   try
   {
     data=await ActivateProjSite(req.params.Id);
-    res.json({msg:"Site abhi jinda hai",data:data});
+    res.json({msg:"Site Status Changed",data:data});
   }catch(err)
   {
     console.log(err);

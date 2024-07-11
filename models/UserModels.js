@@ -336,50 +336,9 @@ if(value.Date.length>0)
     {
      console.log("delete value",data.filteredData)
     }
-  // console.log("sent data",data.filteredData)
-
-  // const t = data.filteredData?.map((data) => ({
-  //   date: data.date,
-  // }));
-  // const d = data.filteredData?.map((data) => ({
-  //   emp_ids: data.emp_ids,
-  // }));
  
-  // console.log("epids :", d, "modifier", d[0].emp_ids.length);
 
-  // for (let i = 0; i < d.length; i++) {
-  //   for (let j = 0; j < d[i].emp_ids.length; j++) {
-  //     //console.log("data count",d[i].emp_ids[j],t[index].date,data.selectedSite.siteId,"0","0",i,j,);
-  //     // console.log(
-  //     //   "data count",
-  //     //   `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
-  //     // );
-
-  //     promise_connection(query, [
-      
-  //       d[i].emp_ids[j],
-  //       data.selectedSite.siteId,
-  //     ]);
-  //     promise_connection(query2, [
-  //       d[i].emp_ids[j],
-  //       `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`,
-  //       data.selectedSite.siteId,
-  //       "1",
-  //       "0",
-  //     ]);
-  //   }
-
-  //   index++;
-  //   try {
-  //     date = new Date(t[index].date);
-  //   } catch (err) {}
-  // }
-
-  // t.forEach(element => {
-  //   console.log(  element.date);
-  //   });
-
-  return "Attendence Lavle bee!!";
+  return "Attendence Updated";
 };
 
 exports.GetAttendance = async (data) => {
