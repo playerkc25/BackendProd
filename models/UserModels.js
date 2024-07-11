@@ -106,7 +106,7 @@ exports.DeleteEmp = async (data) => {
 };
 
 exports.GetRoles = async () => {
-  let query = "SELECT * FROM employee_role where Id>0";
+  let query = "SELECT er.Id,cr.CategoryWork,er.RoleName FROM employee_role as er INNER JOIN category_reg as cr on cr.Id=er.CatagoryId where er.Id>0";
   return await promise_connection(query);
 };
 

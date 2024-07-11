@@ -15,7 +15,6 @@ router.route("/UpdateEmp").put(UpdateEmp);
 router.route("/GetSiteEmp").post(GetSiteEmp);
 router.route("/GetEmpImage/:Id").get(getEmpImages);
 router.route("/UpdateTempPassword").post(UpdateEmpPassword);
-router.route("/GetBillEmpCatRole").post(GetBillEmpCatRole);
 router.route("/ActivateEmp/:Id").put(ActivateEmp);
 router.route("/GetAttendanceId").post(GetEmpAttendance);
 //Designation or Role Management
@@ -69,4 +68,5 @@ router.route("/GetBillSlip/:Id").get(GetBetSlip);
 router.route("/CheckBillParam").post(CheckBillParam);
 router.route("/DeleteBill/:Id").delete(DeleteBill);
 router.route("/GetPaySlip/:Id").get(GetPaySlipId);
+router.route("/GetBillEmpCatRole").post(GetBillEmpCatRole);
 module.exports=router;
