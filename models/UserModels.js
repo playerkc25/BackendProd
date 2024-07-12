@@ -296,7 +296,7 @@ exports.GetSiteEmp = async (data) => {
 
 exports.MarkAttendence = async (data) => {
    //console.log("full sent data",data,"lenth",data.filteredData.length )
-  //  console.log("",data.selectedSite.siteId )
+   console.log("full data",data,"selected site :",data.selectedSite.siteId )
    let query =
    "delete from attendence where  EmpId=? and SiteId=? ";
  let query2 = "insert into attendence values( ?,?,?,?,? )";
