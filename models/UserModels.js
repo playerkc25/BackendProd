@@ -687,7 +687,7 @@ exports.GetPaySlip=async(Id)=>
   
 console.log('pass reset', data)
 
-let query1 = "select userPassword from login_data where username=?";
+let query1 = "select userPassword from login_data where empId=?";
 
 returenable = await promise_connection(query1, [orignaluserid]);
 
