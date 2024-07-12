@@ -681,12 +681,15 @@ exports.GetPaySlip=async(Id)=>
   exports.PasswordVerification=async(data)=>{
     var bytes = CryptoJS.AES.decrypt(data.userPassword, "nks");
     var originalText = bytes.toString(CryptoJS.enc.Utf8);
+
+    var bytes1 = CryptoJS.AES.decrypt(data.userPassword, "nks");
+  var orignaluserid = bytes1.toString(CryptoJS.enc.Utf8);
   
 console.log('pass reset', data)
 
 let query1 = "select userPassword from login_data where username=?";
 
-returenable = await promise_connection(query1, [data.userId]);
+returenable = await promise_connection(query1, [orignaluserid]);
 
 let t = false;
 if (returenable.length) {
