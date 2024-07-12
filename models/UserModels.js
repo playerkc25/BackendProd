@@ -296,7 +296,7 @@ exports.GetSiteEmp = async (data) => {
 
 exports.MarkAttendence = async (data) => {
    //console.log("full sent data",data,"lenth",data.filteredData.length )
-   console.log("full data",data,"selected site :",data.selectedSite.siteId )
+   console.log("full data",data,"selected site :",data.selectedSite )
    let query =
    "delete from attendence where  EmpId=? and SiteId=? ";
  let query2 = "insert into attendence values( ?,?,?,?,? )";
@@ -310,7 +310,7 @@ exports.MarkAttendence = async (data) => {
 // })
 // console.log('date', date,'value ',value)
 // console.log('undervalue', value.emp_id,'valuejj ',value.Date,"value lenth",value.Date.length)
-promise_connection(query, [value.emp_id,data.selectedSite.siteId]);
+promise_connection(query, [value.emp_id,data.selectedSite]);
 if(value.Date.length>0)
   value.Date.map((e)=>{
 
@@ -320,7 +320,7 @@ if(value.Date.length>0)
     //         "1",
     //         "0",
     //       ]);
-          promise_connection(query2, [value.emp_id,dayjs(e,"MM/DD/YYYY").format("YYYY/MM/DD"),data.selectedSite.siteId,
+          promise_connection(query2, [value.emp_id,dayjs(e,"MM/DD/YYYY").format("YYYY/MM/DD"),data.selectedSite,
             "1",
             "0",
           ]);
