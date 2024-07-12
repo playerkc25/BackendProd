@@ -697,7 +697,7 @@ if (returenable.length) {
   // const t=await bcryt.compare("1234",returenable[0].userPassword)
   //console.log("In Login sent pass",data.userPassword,"recivedpass",returenable[0].userPassword,"and resultis",t);
 }
-console.log('query result', returenable,"userid",orignaluserid,"cryp compair result",t);
+console.log('query result', returenable[0].userPassword,"userid",orignaluserid,"userpass ",originalText,"cryp compair result",t);
 return t ? t : [];
     
   }
