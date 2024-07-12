@@ -712,7 +712,7 @@ exports.VerifyPassword=async(req,res)=>{
   let data=[];
   try {
     data =await PasswordVerification(req.body);
-  res.json({msg:"pramotesitelist",data:data});
+  res.json({msg:"Data Varification Status",data:data});
     
   } catch (error) {
     console.log(error);
