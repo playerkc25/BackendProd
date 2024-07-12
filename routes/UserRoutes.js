@@ -2,7 +2,7 @@
 
 const router=require("express").Router();
  
-const { SaveEmp, GetEmp, DeleteEmp, SaveProj_Site, GetRole, GetProj_Site, DeleteProj_Site, UpdateProj_Site, GetSiteID, GetEmpId, UpdateEmp,  Login, GetCategroy, AddEmployeeRole, UpdateRole, GetRoleID, UseAuthenticator, GetRoleCat, GetTalukaList, GetSiteEmp, MarkAttendence, GetAttendance, GetRoleIdAdmin, PramoteUser, GetEmpAdmin, GetEmpWorkData, GetEmpWorkDataId, ResetEmpPass, ActivateProjSite, UpdateFixBillRates, GetFixBillRates, GetBillData,  getEmpImages, UpdateEmpPassword, GetCatagoryRoleList, GetBillEmpCatRole, SaveBill, GetBill, GetBillId, GetCategroyAdmin, GetBetSlip, GetPfData, CheckBillParam, DeleteBill, GetInactiveList, ActivateEmp, GetSiteEmpList, GetEmpAttendance, GetPaySlipId, GetPramoteSites } = require("../controller/UserController");
+const { SaveEmp, GetEmp, DeleteEmp, SaveProj_Site, GetRole, GetProj_Site, DeleteProj_Site, UpdateProj_Site, GetSiteID, GetEmpId, UpdateEmp,  Login, GetCategroy, AddEmployeeRole, UpdateRole, GetRoleID, UseAuthenticator, GetRoleCat, GetTalukaList, GetSiteEmp, MarkAttendence, GetAttendance, GetRoleIdAdmin, PramoteUser, GetEmpAdmin, GetEmpWorkData, GetEmpWorkDataId, ResetEmpPass, ActivateProjSite, UpdateFixBillRates, GetFixBillRates, GetBillData,  getEmpImages, UpdateEmpPassword, GetCatagoryRoleList, GetBillEmpCatRole, SaveBill, GetBill, GetBillId, GetCategroyAdmin, GetBetSlip, GetPfData, CheckBillParam, DeleteBill, GetInactiveList, ActivateEmp, GetSiteEmpList, GetEmpAttendance, GetPaySlipId, GetPramoteSites, VerifyPassword } = require("../controller/UserController");
 
 
 
@@ -51,6 +51,7 @@ router.route("/ResetEmpPass/:Id").get(ResetEmpPass);
 router.route("/GetCategoryAdmin").get(GetCategroyAdmin);
 router.route("/GetInactiveList").get(GetInactiveList);
 router.route("/GetPramoteSites").get(GetPramoteSites);
+router.route("/VerifyPassword").post(VerifyPassword);
 
 //Misc
 router.route("/GetCategory").get(GetCategroy);

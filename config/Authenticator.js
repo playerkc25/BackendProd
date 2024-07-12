@@ -5,9 +5,9 @@ exports.Authencticate = async (req, res) => {
  
   try {
    // console.log("in atuhenticator")
-    console.log(req);
+  //  console.log(req);
     let data=req[0].roleID;
-    console.log(req);
+ //   console.log(req);
    const token= await jwt.sign({data},jwtkey,{ expiresIn: '1D' })
    //console.log("singed token",token);
 return(token);

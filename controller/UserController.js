@@ -55,6 +55,7 @@ const {
   GetEmpAttendanceId,
   GetPaySlip,
   GetPramoteSites,
+  PasswordVerification,
  
 } = require("../models/UserModels");
 
@@ -707,3 +708,14 @@ try {
 
 }
 
+exports.VerifyPassword=async(req,res)=>{
+  let data=[];
+  try {
+    data =await PasswordVerification(req.body);
+  res.json({msg:"pramotesitelist",data:data});
+    
+  } catch (error) {
+    console.log(error);
+    res.json({msg:error})
+  }
+}

@@ -30,7 +30,7 @@ app.post("/Login", async (req, res) => {
     data = await Login(req.body);
 
    // req.body.userPassword=bcrypt.
-    console.log("sent body is",req.body);
+    //console.log("sent body is",req.body);
 
    if(data.length)
    {

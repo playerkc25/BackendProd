@@ -677,3 +677,24 @@ exports.GetPaySlip=async(Id)=>
     let query="";
     return promise_connection(query);
   }
+
+  exports.PasswordVerification=async(data)=>{
+    var bytes = CryptoJS.AES.decrypt(data.userPassword, "nks");
+    var originalText = bytes.toString(CryptoJS.enc.Utf8);
+  
+console.log('pass reset', data)
+
+let query1 = "select userPassword from login_data where username=?";
+
+returenable = await promise_connection(query1, [data.userId]);
+
+let t = false;
+if (returenable.length) {
+  t = await bcryt.compareSync(originalText, returenable[0].userPassword);
+  // const t=await bcryt.compare("1234",returenable[0].userPassword)
+  //console.log("In Login sent pass",data.userPassword,"recivedpass",returenable[0].userPassword,"and resultis",t);
+}
+
+return t ? t : [];
+    
+  }
