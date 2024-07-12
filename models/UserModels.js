@@ -682,7 +682,7 @@ exports.GetPaySlip=async(Id)=>
     var bytes = CryptoJS.AES.decrypt(data.userPassword, "nks");
     var originalText = bytes.toString(CryptoJS.enc.Utf8);
 
-    var bytes1 = CryptoJS.AES.decrypt(data.userPassword, "nks");
+    var bytes1 = CryptoJS.AES.decrypt(data.userId, "nks");
   var orignaluserid = bytes1.toString(CryptoJS.enc.Utf8);
   
 
