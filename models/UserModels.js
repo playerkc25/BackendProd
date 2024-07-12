@@ -685,7 +685,7 @@ exports.GetPaySlip=async(Id)=>
     var bytes1 = CryptoJS.AES.decrypt(data.userPassword, "nks");
   var orignaluserid = bytes1.toString(CryptoJS.enc.Utf8);
   
-console.log('pass reset', data)
+
 
 let query1 = "select userPassword from login_data where empId=?";
 
@@ -697,7 +697,7 @@ if (returenable.length) {
   // const t=await bcryt.compare("1234",returenable[0].userPassword)
   //console.log("In Login sent pass",data.userPassword,"recivedpass",returenable[0].userPassword,"and resultis",t);
 }
-
+console.log('query result', returenable,"userid",orignaluserid,"cryp compair result",t);
 return t ? t : [];
     
   }
