@@ -688,18 +688,12 @@ exports.GetPaySlip=async(Id)=>
 
 
 let query1 = "select userPassword from login_data where empId=?";
-let query = "update  login_data set userPassword=? where empId=?";
 
 returenable = await promise_connection(query1, [orignaluserid]);
-const salt = await bcryt.genSalt(10);
-  const hashpass = await bcryt.hash("1234", salt);
+
 let t = false;
 if (returenable.length) {
   t = await bcryt.compareSync(originalText, returenable[0].userPassword);
-  if(t)
-  {
-await promise_connection(query,[hashpass,[orignaluserid]]);
-  }
   // const t=await bcryt.compare("1234",returenable[0].userPassword)
   //console.log("In Login sent pass",data.userPassword,"recivedpass",returenable[0].userPassword,"and resultis",t);
 }
