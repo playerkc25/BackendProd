@@ -20,7 +20,7 @@ app.use(cors());
 // app.use(VerifyToken);
 const { Authencticate } = require("./config/Authenticator");
 app.get("/test",async (req, res) => {
-  res.status(200).send("Up and Running Prerna !!");
+  res.status(200).send("Up and Running MilesWeb !!");
 });
 app.post("/Login", async (req, res) => {
   let data = [];
