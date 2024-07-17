@@ -56,6 +56,8 @@ const {
   GetPaySlip,
   GetPramoteSites,
   PasswordVerification,
+  test1,
+  test2,
  
 } = require("../models/UserModels");
 
@@ -718,4 +720,30 @@ exports.VerifyPassword=async(req,res)=>{
     console.log(error);
     res.json({msg:error})
   }
+}
+
+exports.test1=async(req,res)=>{
+
+  let data=[];
+  try {
+    data =await test1(req.body);
+    res.json({msg:"Test 1",data:data});
+  } catch (error) {
+    console.log(error);
+    res.json({msg:error})
+  }
+
+}
+
+exports.test2=async(req,res)=>{
+
+  let data=[];
+  try {
+    data =await test2();
+    res.json({msg:"Test 2",data:data});
+  } catch (error) {
+    console.log(error);
+    res.json({msg:error})
+  }
+
 }

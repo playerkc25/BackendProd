@@ -707,3 +707,13 @@ return t ? t : [];
 let query="select * from proj_site where Id> ";
 return null;
   }
+
+  exports.test2=async()=>{
+    let query="select * from proj_site where Id> ";
+    return promise_connection(query);
+      }
+
+      exports.test1=async(data)=>{
+       
+        return promise_connection("Routes Working u sent data",data );
+          }
