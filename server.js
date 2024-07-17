@@ -20,14 +20,14 @@ app.use(cors());
 // app.use(VerifyToken);
 const { Authencticate } = require("./config/Authenticator");
 app.get("/test",async (req, res) => {
-  res.status(200).send("Up and Running");
+  res.status(200).send("Up and Running Prerna");
 });
 app.post("/Login", async (req, res) => {
   let data = [];
   let key=null;
   try {
     
-    data = await Login(req.body);
+    data = await Logvin(req.body);
 
    // req.body.userPassword=bcrypt.
     //console.log("sent body is",req.body);

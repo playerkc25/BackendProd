@@ -701,3 +701,9 @@ console.log('query result', returenable[0].userPassword,"userid",orignaluserid,"
 return t ? t : [];
     
   }
+
+
+  exports.GetEmpSites=async()=>{
+let query="select * from proj_site where Id> ";
+return null;
+  }
